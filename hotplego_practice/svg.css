@@ -1,0 +1,85 @@
+#restaurant {
+    animation: moveFromLeft 1s ease forwards;
+}
+
+#coffee-shop {
+    transform: translateX(100%);
+    animation: moveFromRight 1s ease 0.5s forwards;
+}
+
+#park {
+    transform: translateX(-100%);
+    animation: moveFromLeft 1s ease 1.5s forwards;
+}
+
+#mark1,
+#mark2,
+#mark3 {
+    transform: translateY(-100%);
+}
+
+#mark1 {
+    animation: mark 1s ease 2.5s forwards;
+}
+
+#mark2 {
+    animation: mark 1s ease 2.75s forwards;
+}
+
+#mark3 {
+    animation: mark 1s ease 3s forwards;
+}
+
+#banel {
+    transform: scale(0);
+    animation: banel 0.5s ease-in-out 4s forwards;
+    transform-origin: center;
+}
+
+@keyframes moveFromLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes moveFromRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes mark {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes banel {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes line-anim {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fills {
+    to {
+        fill: white;
+    }
+}

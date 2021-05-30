@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <object id="hotplace" type="image/svg+xml" data="road.svg"></object>
+    <script>
+        let svg = document.getElementById('hotplace');
+        svg.addEventListener(
+            "DOMContentLoaded",
+            () => {
+                function animateSgv(id, delay, delayIncrement) {
+                    const doc = svg.contentDocument;
+                    const logo = doc.getElementById(id);
+                    const logoPaths = doc.querySelectorAll(`#${id} > path`);
+                    for (let i = 0; i < logoPaths.length; i++) {
+                        logoPaths[i].style.strokeDasharray =
+                            logoPaths[i].getTotalLength();
+                        logoPaths[i].style.strokeDashoffset =
+                            logoPaths[i].getTotalLength();
+                        logoPaths[
+                            i
+                        ].style.animation = `line-anim 2s ease 4.5s forwards ${delay}s`;
+                        delay += delayIncrement;
+                    }
+                    logo.style.animation = `fills 0.5s ease 4.5 forwards ${
+                        delay + 1.25
+                    }s`;
+                }
+                // Set the id of SVG, delay time in seconds to start animation and delay between each animation
+                animateSgv("title", 0, 0.3);
+            },
+            false
+        );
+    </script>
+</body>
+</html>
