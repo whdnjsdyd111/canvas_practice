@@ -305,42 +305,6 @@ select {
     border-width: 20px;
 }
 
-table {
-    background: #34495e;
-    color: #fff;
-    border-radius: 30px;
-    padding: 15px;
-    border-spacing: 10px 10px;
-}
-
-th {
-    color: #dd5;
-    font-weight: 700;
-}
-
-th,
-td {
-    text-align: left;
-}
-
-th:nth-child(1),
-td:nth-child(1) {
-    padding: 5px;
-    margin-inline: 5px;
-}
-
-td:nth-child(1) {
-    background: #797b7d;
-    border-radius: 7px;
-}
-
-td i {
-    margin-left: 5px;
-    padding: 5px;
-    border-radius: 10px;
-    background: #2196f3;
-}
-
 .cir_body {
     position: relative;
 }
@@ -354,11 +318,6 @@ td i {
     font-weight: 800;
 }
 
-a {
-    color: #000;
-    text-decoration: none;
-}
-
 .overlaybox {
     position: relative;
     top: 0;
@@ -367,8 +326,6 @@ a {
     width: 250px;
     height: 150px;
     background: rgba(63, 63, 63, 0.95);
-    padding-top: 10px;
-    padding-left: 7px;
     border-radius: 15px;
     border-top: 2px solid rgba(255, 255, 255, 0.5);
     border-left: 2px solid rgba(255, 255, 255, 0.5);
@@ -385,28 +342,4 @@ a {
     left: 50%;
     transform: translate(-50%);
     position: absolute;
-}
-
-.overlaybox h4 {
-    color: #fff;
-    font-weight: 900;
-}
-
-.overlaybox div {
-    margin-block: 7px;
-}
-
-.overlaybox div span:nth-child(1) {
-    color: #fff;
-    border-right: 2px solid #e1f6ff;
-    padding-right: 5px;
-}
-
-.overlaybox div span:nth-child(2) {
-    color: rgb(212, 212, 212);
-}
-
-.overlaybox p {
-    color: #fff;
-    font-size: 0.6em;
 }
