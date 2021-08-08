@@ -2,12 +2,14 @@ var lat = 35.8679305;
 var lng = 128.7053832;
 var map;
 
-const imageSrc = "marker.png";
-let imageSize = new kakao.maps.Size(32, 32);
-let markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
-
-const userMarkerSrc = "userMarker.png";
-let userMarkerImage = new kakao.maps.MarkerImage(userMarkerSrc, imageSize);
+let markerImage = new kakao.maps.MarkerImage(
+    "marker.png",
+    new kakao.maps.Size(32, 32)
+);
+let userMarkerImage = new kakao.maps.MarkerImage(
+    "https://publicdomainvectors.org/photos/noun-project-462",
+    new kakao.maps.Size(14, 25)
+);
 
 let hospitals = {
     currentCount: 269,
@@ -4386,6 +4388,7 @@ markers.forEach((v, i) => {
                 v.getPosition().getLng()
             )
         );
+        map.setLevel(9);
         polyLine.setPath([v.getPosition(), new kakao.maps.LatLng(lat, lng)]);
     });
 });
@@ -4435,11 +4438,13 @@ function distance(lat1, lng1, lat2, lng2) {
 
 function setContent(h, i) {
     return `<div class="overlaybox" onclick="closeOverlay(overlaies[${i}])">
+    <div>
     <h4>${h.facilityName}</h4>
     <div>
     <span>${KmOrM(lat, lng, h.lat, h.lng)}</span>
     <span>${h.phoneNumber}</span>
     </div>
     <p>${h.address}</p>
+    <div>
     </div>`;
 }

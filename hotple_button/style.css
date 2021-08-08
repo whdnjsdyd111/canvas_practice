@@ -284,54 +284,6 @@ button {
     transition: 0.3s;
 }
 
-.wonyong-btn-neon:hover {
-    transform: translate(0px, -10px);
-    letter-spacing: 1px;
-}
-
-.wonyong-btn-neon:active {
-    transform: scale(1.2);
-}
-
-.wonyong-btn-neon:hover::after {
-    animation: none;
-    position: absolute;
-    top: 25px;
-    left: 100px;
-    content: "";
-    border: none;
-    min-width: 220px;
-    min-height: 70px;
-    border: #00ffd5 solid 10px;
-    border-radius: 1200px;
-}
-
-.wonyong-btn-neon:hover::before {
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    content: "";
-    border: none;
-    min-width: 210px;
-    min-height: 60px;
-    border: #fff solid 5px;
-    border-radius: 1200px;
-}
-
-.wonyong-btn-neon:after {
-    content: "";
-    width: 30px;
-    height: 30px;
-    border-radius: 100%;
-    border: 6px solid #00ffcb;
-    position: absolute;
-    z-index: -1;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation: ring 1.5s infinite;
-}
-
 @keyframes ring {
     0% {
         width: 30px;

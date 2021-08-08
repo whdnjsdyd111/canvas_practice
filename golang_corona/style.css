@@ -54,7 +54,23 @@ body::after {
 
 @media (max-width: 924px) {
     .menus {
-        display: none;
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        z-index: 1000;
+    }
+
+    .menus ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 30px;
+        width: 400px;
+        padding-inline: 50px;
+    }
+
+    .menus ul li {
+        font-size: 0.5em;
     }
 
     .container .statistics {
@@ -67,6 +83,13 @@ body::after {
 }
 
 @media (max-width: 580px) {
+    .menus {
+        position: fixed;
+        top: -10px;
+        left: 0%;
+        z-index: 1000;
+    }
+
     td {
         font-size: 0.7em;
     }
@@ -176,7 +199,7 @@ footer {
 .container .statistics p {
     font-size: 1.2em;
     margin-right: 7px;
-    display: inline;
+    display: block;
 }
 
 .container .statistics i {
@@ -367,8 +390,7 @@ a {
     width: 250px;
     height: 150px;
     background: rgba(63, 63, 63, 0.95);
-    padding-top: 10px;
-    padding-left: 7px;
+    text-align: center;
     border-radius: 15px;
     border-top: 2px solid rgba(255, 255, 255, 0.5);
     border-left: 2px solid rgba(255, 255, 255, 0.5);
@@ -387,26 +409,32 @@ a {
     position: absolute;
 }
 
-.overlaybox h4 {
+.overlaybox > div {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.overlaybox div h4 {
     color: #fff;
     font-weight: 900;
 }
 
-.overlaybox div {
+.overlaybox div div {
     margin-block: 7px;
 }
 
-.overlaybox div span:nth-child(1) {
+.overlaybox div div span:nth-child(1) {
     color: #fff;
     border-right: 2px solid #e1f6ff;
     padding-right: 5px;
 }
 
-.overlaybox div span:nth-child(2) {
+.overlaybox div div span:nth-child(2) {
     color: rgb(212, 212, 212);
 }
 
-.overlaybox p {
+.overlaybox div p {
     color: #fff;
     font-size: 0.6em;
 }
