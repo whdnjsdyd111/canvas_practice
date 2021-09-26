@@ -6,6 +6,10 @@
 
 body {
     font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .container {
@@ -24,5 +28,10 @@ body {
 }
 
 .img-container img {
-    width: 400px;
+    width: 100%;
+}
+
+.login-container {
+    justify-content: center;
+    align-items: center;
 }
